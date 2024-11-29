@@ -6,7 +6,7 @@ const App = () => {
   const [answers, setAnswers] = useState([]);
   const [result, setResult] = useState(null);
 
-  // أسئلة الاختبار
+
   const questions = [
     {
       question: "ما الذي يجذبك أكثر عند زيارة تطبيق او موقع الكتروني؟",
@@ -57,6 +57,7 @@ const App = () => {
         "قائد فريق التطوير",
         "مطوّر ألعاب",
         "محلل بيانات أو خبير أمني",
+        "مسؤول عن الجودة وخلو البرامج من الاخطاء",
         "مطور مواقع الكترونية",
         "مطور تطبيقات الهواتف",
         "مسؤول عن امان الشبكات",
@@ -65,7 +66,7 @@ const App = () => {
     },
   ];
 
-  // تحليل الإجابات وتحديد النتيجة
+
   const analyzeAnswers = (answers) => {
     const scores = {
       uiux: 0,
@@ -73,14 +74,20 @@ const App = () => {
       gaming: 0,
       cybersecurity: 0,
       dataScience: 0,
+      quality: 0,
+      fullstak:0,
+      network:0,
     };
 
     answers.forEach((answer) => {
-      if (answer.includes("تصميم") || answer.includes("إبداع")) scores.uiux++;
+      if (answer.includes("تصميم") || answer.includes("إبداع") || answer.includes("تجربة مستخدم")) scores.uiux++;
       if (answer.includes("برامج") || answer.includes("التقنية")) scores.development++;
       if (answer.includes("ألعاب") || answer.includes("تحديات")) scores.gaming++;
       if (answer.includes("الأمان") || answer.includes("حماية")) scores.cybersecurity++;
       if (answer.includes("تحليل") || answer.includes("البيانات")) scores.dataScience++;
+      if (answer.includes("مواقع الكترونية") || answer.includes("اكواد")) scores.fullstak++;
+      if (answer.includes("تصميم وانشاء شبكات") || answer.includes("شبكات")) scores.network++;
+      if (answer.includes("الاخطاء") || answer.includes("الجودة") || answer.includes("اختبار")|| answer.includes("اخطاء")) scores.quality++;
     });
 
     const field = Object.keys(scores).reduce((a, b) =>
@@ -111,6 +118,16 @@ const App = () => {
       dataScience: {
         field: "تحليل البيانات",
         description: "تعلم Python لتحليل البيانات باستخدام Pandas.",
+        image: "https://via.placeholder.com/300?text=Data+Science",
+      },
+      quality: {
+        field: "ضمان جودة البرمجيات",
+        description: "تعلم كيفية ملاحظة الاخطاء في المواقع والتطبيقات وكيفية الابلاغ عنها",
+        image: "https://via.placeholder.com/300?text=Data+Science",
+      },
+      fullstak: {
+        field: "مطور مواقع الكترونية",
+        description: "تعرف اكثر عن المجال وحدد اذا كنت تريد ان تكون Frontend dev او Backend dev",
         image: "https://via.placeholder.com/300?text=Data+Science",
       },
     };
@@ -167,7 +184,7 @@ const App = () => {
     <div className="quiz-container">
       <h1>اختبار: اكتشف ميولك التقنية</h1>
       <div className="question-section">
-        <h2>{questions[currentQuestion].question}</h2>
+        <p>{questions[currentQuestion].question}</p>
         {questions[currentQuestion].options.map((option, index) => (
           <button
             key={index}
