@@ -4,25 +4,31 @@
   box-sizing: border-box;
   direction: rtl;
 }
+body{
+
+  background-image: url("../public/backheader.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background-color: #f5f5f5;
+
 }
 
 .logo-img {
-  width: 100px; /* حجم الشعار */
+  width: 200px; /* حجم الشعار */
 }
 
 .other-images {
   display: flex;
-  gap: 15px;
+  gap: 10px;
 }
 
 .header-img {
-  width: 50px; /* حجم الصور الإضافية */
+  width:70px; /* حجم الصور الإضافية */
   height: auto;
 }
 .quiz-container {
@@ -32,6 +38,9 @@
   border-radius: 10px;
   background-color: #f9fafb;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.quiz-container h2{
+margin-bottom: 20px;
 }
 
 .option-button {
@@ -44,6 +53,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: large;
 }
 
 .option-button:hover {
@@ -54,7 +64,6 @@
   text-align: center;
   margin: 20px auto;
   padding: 20px;
-  background-color: #e0f7fa;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
