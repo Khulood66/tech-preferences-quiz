@@ -19,16 +19,16 @@ body{
 }
 
 .logo-img {
-  width: 200px; /* حجم الشعار */
+  width: 100px; /* حجم الشعار */
 }
 
 .other-images {
   display: flex;
-  gap: 10px;
+  gap: 6px;
 }
 
 .header-img {
-  width:70px; /* حجم الصور الإضافية */
+  width:60px; /* حجم الصور الإضافية */
   height: auto;
 }
 .quiz-container {
