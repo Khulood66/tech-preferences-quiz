@@ -77,11 +77,13 @@ const App = () => {
       quality: 0,
       fullstak:0,
       network:0,
+      mobile:0,
     };
 
     answers.forEach((answer) => {
       if (answer.includes("تصميم") || answer.includes("إبداع") || answer.includes("تجربة مستخدم")) scores.uiux++;
       if (answer.includes("برامج") || answer.includes("التقنية")) scores.development++;
+      if (answer.includes("تطبيقات الهواتف") || answer.includes("تطوير")) scores.mobile++;
       if (answer.includes("ألعاب") || answer.includes("تحديات")) scores.gaming++;
       if (answer.includes("الأمان") || answer.includes("حماية")) scores.cybersecurity++;
       if (answer.includes("تحليل") || answer.includes("البيانات")) scores.dataScience++;
@@ -98,7 +100,7 @@ const App = () => {
       uiux: {
         field: "تصميم واجهات وتجربة مستخدم",
         description: "تعلم تصميم واجهات باستخدام Figma أو Adobe XD.",
-        image: "https://via.placeholder.com/300?text=UI/UX",
+        image: "assets/UI-UX.png",
       },
       development: {
         field: "تطوير البرامج",
@@ -113,12 +115,12 @@ const App = () => {
       cybersecurity: {
         field: "الأمن السيبراني",
         description: "تعرف على Kali Linux وطرق حماية الشبكات.",
-        image: "https://via.placeholder.com/300?text=Cybersecurity",
+        image: "assets/Hacker-bro.png",
       },
       dataScience: {
         field: "تحليل البيانات",
         description: "تعلم Python لتحليل البيانات باستخدام Pandas.",
-        image: "https://via.placeholder.com/300?text=Data+Science",
+        image: "assets/Analysis.png",
       },
       quality: {
         field: "ضمان جودة البرمجيات",
@@ -128,7 +130,12 @@ const App = () => {
       fullstak: {
         field: "مطور مواقع الكترونية",
         description: "تعرف اكثر عن المجال وحدد اذا كنت تريد ان تكون Frontend dev او Backend dev",
-        image: "https://via.placeholder.com/300?text=Data+Science",
+        image: "assets/web.png",
+      },
+     mobile: {
+        field: "مطور تطبيقات جوال",
+        description: "تعرف على تقنيات تطوير تطبيقات الجوال واللغات الخاصه بها مثل kotlin , java و swift او اطر العمل مثل react native و flutter",
+        image: "assets/mobile.png",
       },
     };
 
