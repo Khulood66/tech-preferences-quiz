@@ -135,7 +135,7 @@ const App = () => {
      mobile: {
         field: "مطور تطبيقات جوال",
         description: "تعرف على تقنيات تطوير تطبيقات الجوال واللغات الخاصه بها مثل kotlin , java و swift او اطر العمل مثل react native و flutter",
-        image: "assets/mobile.png",
+        image: "assets/Mobile.png",
       },
     };
 
