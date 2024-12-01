@@ -167,9 +167,9 @@ const App = () => {
       </div>
     </header>
       <div className="result-container">
+         <img src={result.image} alt={result.field} />
         <h2>نتيجتك: {result.field}</h2>
         <p>{result.description}</p>
-        <img src={result.image} alt={result.field} />
       </div>
       </>
     );
